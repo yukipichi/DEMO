@@ -9,7 +9,7 @@
                     {{ $stock->name }}<br>
                     {{ $stock->fee }}円<br>
                     <img src="/image/{{$stock->imagePath}}" alt="" class="incart" ><br>
-                    {{ $stock->imagePath }}<br>
+                    {{-- {{ $stock->imagePath }}<br> --}}
                     {{ $stock->explane }}<br>
 
                     <form method="post" action="{{ url('/addMyCart') }}">
