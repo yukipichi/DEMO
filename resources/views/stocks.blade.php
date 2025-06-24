@@ -11,27 +11,27 @@
                             {{$stock->fee}}円<br>
                             <img src="/image/{{$stock->imagePath}}" alt="" class="incart" ><br>
                             {{$stock->explain}} <br>
-                             
+
                               <form method=“GET” action="{{ url('/detail/' . $stock->id) }}">
                                 @csrf
                                 <input type="hidden" name="stockId" value="{{ $stock->id }}">
                                 <button class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 m-2 rounded ">商品詳細</button>
-                            </form>    
+                            </form>
                             <form action="addMyCart" method="post">
                                 @csrf
                                 <input type="hidden" name="stockId" value="{{ $stock->id }}">
                                 <button class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 m-2 rounded ">カートに入れる</button>
                             </form>
-                             
+
                         </div>
-    
+
                     @endforeach
                     {{-- 追加 --}}
                 </div>
                 <div class="text-center" style="width: 200px;margin: 20px auto;">
-                    {{  $stocks->links()}} 
+                    {{  $stocks->links()}}
                 </div>
-                {{-- ここまで --}}  
+                {{-- ここまで --}}
             </div>
         </div>
     </div>
